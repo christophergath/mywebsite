@@ -54,9 +54,10 @@ nav {
             width: 20%;
             float: left;
             display: block;
-            height: 100px;
+            height: 105px;
             text-align: center;
             padding-top: 30px;
+            font-size: 1.2em;
 
 
 
@@ -91,7 +92,7 @@ nav {
     font-size: 2.5em;
 
     &:hover {
-        font-size: 2.9em;
+        font-size: 3em;
         text-transform:uppercase;
 
     }
@@ -113,11 +114,8 @@ nav {
 }
 
 .activeli{
-    box-shadow: 1px 1px 5px;
     transition: 0.5s ease;
-    &:hover{
-        box-shadow: 2px 2px 5px;
-    }
+
 }
 
 
@@ -168,3 +166,10 @@ background-image: linear-gradient(to right, #667eea 0%, #764ba2 100%);
 }
 
 
+
+
+
+
+.bounceInDown{
+    animation-delay:0s;
+}

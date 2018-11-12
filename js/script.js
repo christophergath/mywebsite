@@ -1,7 +1,8 @@
 var navItems = document.getElementsByClassName('nav-item');
-var navAItems = document.getElementsByClassName('nav-a-class');
 var navStyle = document.getElementsByTagName('nav');
 var aTag = document.getElementsByTagName('a');
+
+
 
 var viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 console.log(viewportHeight);
@@ -23,13 +24,10 @@ function doSomething(scroll_pos) {
     //
 
   if (scroll_pos < viewportHeight-partialViewportHeight){
-      navItems[0].classList.add('activeli');
-      navItems[1].classList.remove('activeli');
-      navItems[3].classList.remove('activeli');
-      navItems[4].classList.remove('activeli');
-//
-//      navAItems[0].classList.add('active');
-//      navAItems[1].classList.remove('active');
+      navItems[0].classList.add('activeli','animated','fadeInDown');
+      navItems[1].classList.remove('activeli','animated','fadeInDown');
+      navItems[3].classList.remove('activeli','animated','fadeInDown');
+      navItems[4].classList.remove('activeli','animated','fadeInDown');
 
 
       navStyle[0].classList.add('bg1');
@@ -48,15 +46,10 @@ function doSomething(scroll_pos) {
 
     else if(scroll_pos > viewportHeight-partialViewportHeight && scroll_pos < viewportHeight*2-partialViewportHeight){
         console.log("Scrollolol position ="+scroll_pos);
-        navItems[0].classList.remove('activeli');
-        navItems[1].classList.add('activeli');
-        navItems[3].classList.remove('activeli');
-        navItems[4].classList.remove('activeli');
-
-//        navAItems[0].classList.remove('active');
-//        navAItems[1].classList.add('active');
-//        navAItems[3].classList.remove('active');
-//        navAItems[4].classList.remove('active');
+        navItems[0].classList.remove('activeli','animated','fadeInDown');
+        navItems[1].classList.add('activeli','animated','fadeInDown');
+        navItems[3].classList.remove('activeli','animated','fadeInDown');
+        navItems[4].classList.remove('activeli','animated','fadeInDown');
 
         navStyle[0].classList.remove('bg1');
         navStyle[0].classList.add('bg2');
@@ -77,15 +70,11 @@ function doSomething(scroll_pos) {
 
     else if(scroll_pos > viewportHeight*2-partialViewportHeight && scroll_pos < viewportHeight*3-partialViewportHeight){
         console.log("Scrollolol position ="+scroll_pos);
-        navItems[0].classList.remove('activeli');
-        navItems[1].classList.remove('activeli');
-        navItems[3].classList.add('activeli');
-        navItems[4].classList.remove('activeli');
+        navItems[0].classList.remove('activeli','animated','fadeInDown');
+        navItems[1].classList.remove('activeli','animated','fadeInDown');
+        navItems[3].classList.add('activeli','animated','fadeInDown');
+        navItems[4].classList.remove('activeli','animated','fadeInDown');
 
-//        navAItems[0].classList.remove('active');
-//        navAItems[1].classList.remove('active');
-//        navAItems[3].classList.add('active');
-//        navAItems[4].classList.remove('active');
 
         navStyle[0].classList.remove('bg2');
         navStyle[0].classList.add('bg3');
@@ -104,15 +93,11 @@ function doSomething(scroll_pos) {
 
      else if(scroll_pos > viewportHeight*3-partialViewportHeight ){
         console.log("Scrollolol position ="+scroll_pos);
-        navItems[0].classList.remove('activeli');
-        navItems[1].classList.remove('activeli');
-        navItems[3].classList.remove('activeli');
-        navItems[4].classList.add('activeli');
+        navItems[0].classList.remove('activeli','animated','fadeInDown');
+        navItems[1].classList.remove('activeli','animated','fadeInDown');
+        navItems[3].classList.remove('activeli','animated','fadeInDown');
+        navItems[4].classList.add('activeli','animated','fadeInDown');
 
-//        navAItems[0].classList.remove('active');
-//        navAItems[1].classList.remove('active');
-//        navAItems[3].classList.remove('active');
-//        navAItems[4].classList.add('active');
 
         navStyle[0].classList.remove('bg1');
         navStyle[0].classList.add('bg4');
