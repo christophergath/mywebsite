@@ -1,42 +1,57 @@
+// ###############################################################
+// ##################    IMPORTS  ################################
+// ###############################################################
+
+// ###############################################################
+// ##################    VARIABLES  ##############################
+// ###############################################################
+
+// Colors
+
 $Hauptfarbe: #f5f7fa;
 $Zweitfarbe: #c3cfe2;
 $Drittfarbe: #C5CADE;
+
+// ###############################################################
+// ##################    GENERAL TAGS    #########################
+// ###############################################################
 
 * {
     margin: 0px;
     padding: 0px;
 }
 
-a{
+a {
     color: black;
 }
+
+// ###############################################################
+// ##################  SITEWRAPPERS  #############################
+// ###############################################################
 
 #sitewrapper1 {
     width: 100%;
     height: 100vh;
-
-
-
 }
+
 #sitewrapper3 {
     width: 100%;
     height: 100vh;
-
-
 }
+
 #sitewrapper2 {
     width: 100%;
     height: 100vh;
-
-
 }
+
 #sitewrapper4 {
     width: 100%;
     height: 100vh;
-
 }
 
-
+// ###############################################################
+// ##################    NAV    ##################################
+// ###############################################################
 
 nav {
     position: fixed;
@@ -44,13 +59,13 @@ nav {
     height: 100px;
     z-index: 99;
 
+
     ul {
         width: 100%;
         height: 100px;
         display: block;
 
         li {
-
             width: 20%;
             float: left;
             display: block;
@@ -63,7 +78,6 @@ nav {
 
 
             a {
-
                 font-size: 2.1em;
                 text-decoration: none;
                 font-size: 2em;
@@ -73,103 +87,77 @@ nav {
                 transition-duration: 0.2s;
 
                 &:hover {
-
                     color: #E6E9F2;
                     font-size: 2.1em;
-
-
-
                 }
-
             }
         }
     }
-
 }
 
-.logola {
 
+// ###############################################################
+// ##################  BACKGROUND CLASSES   ######################
+// ###############################################################
+
+
+.bg1 {
+    background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
+}
+
+.bg2 {
+    background-image: linear-gradient(to right, #e6e9f0, #eef1f5);
+}
+
+.bg3 {
+    background: #cb2d3e;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #cb2d3e, #ef473a);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #cb2d3e, #ef473a);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg4 {
+    background-image: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+}
+
+
+
+
+// ###############################################################
+// ##################  EXTRA CLASSES  ############################
+// ###############################################################
+
+
+.logola {
     font-size: 2.5em;
 
     &:hover {
         font-size: 3em;
-        text-transform:uppercase;
-
+        text-transform: uppercase;
     }
-
 }
 
 .logoli {
     padding-top: 25px;
-
 }
 
-.active{
+.active {
     color: white;
-     font-size: 2.1em;
+    font-size: 2.1em;
 
-    &:hover{
+    &:hover {
         color: whitesmoke;
     }
 }
 
-.activeli{
+.activeli {
     transition: 0.5s ease;
-
 }
 
 
+// ###############################################################
+// ##################  MEDIA QUERIES  ############################
+// ###############################################################
 
-footer {
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
- background-blend-mode: multiply,multiply;
-    width: 100%;
-    height: 150px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.bg1{
-
- background-image: linear-gradient(to right, #89f7fe 0%, #66a6ff 100%);
-
-}
-
-.bg2{
-
-background-image: linear-gradient(to right, #e6e9f0, #eef1f5);
-
-}
-
-.bg3{
-
-     background: #cb2d3e;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #cb2d3e, #ef473a);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #cb2d3e, #ef473a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-.bg4{
-
-background-image: linear-gradient(to right, #667eea 0%, #764ba2 100%);
-
-}
-
-
-
-
-
-
-.bounceInDown{
-    animation-delay:0s;
-}
