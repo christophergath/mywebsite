@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 * {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+  font-size: 18px;
+  font-family: Montserrat, serif; }
 
 a {
   color: black; }
@@ -25,7 +28,7 @@ nav {
   position: fixed;
   width: 100%;
   height: 100px;
-  z-index: 99; }
+  z-index: 4; }
   nav ul {
     width: 100%;
     height: 100px;
@@ -42,12 +45,11 @@ nav {
         font-size: 2.1em;
         text-decoration: none;
         font-size: 2em;
-        font-family: 'Cinzel', serif;
+        font-family: 'Montserrat', serif;
         font-weight: 500;
         transition-timing-function: easeInCubic;
         transition-duration: 0.2s; }
         nav ul li a:hover {
-          color: #E6E9F2;
           font-size: 2.1em; }
 
 .bg1 {
@@ -67,6 +69,41 @@ nav {
 .bg4 {
   background-image: linear-gradient(to right, #667eea 0%, #764ba2 100%); }
 
+#mobile-nav {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 55; }
+
+#mobilemenuwrapper {
+  height: 50vh;
+  width: 50vw;
+  background-color: grey;
+  position: fixed;
+  top: 25vh;
+  left: 24vw; }
+  #mobilemenuwrapper ul {
+    width: 100%;
+    height: 100%; }
+    #mobilemenuwrapper ul li {
+      width: 100%;
+      height: 25%;
+      padding-top: 5%;
+      font-size: 2rem;
+      text-align: center; }
+      #mobilemenuwrapper ul li::before {
+        content: '>'; }
+      #mobilemenuwrapper ul li a {
+        text-decoration: none; }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+
 .logola {
   font-size: 2.5em; }
   .logola:hover {
@@ -79,10 +116,28 @@ nav {
 .active {
   color: white;
   font-size: 2.1em; }
-  .active:hover {
-    color: whitesmoke; }
 
 .activeli {
   transition: 0.5s ease; }
+
+.backtotop {
+  display: block;
+  position: fixed;
+  height: 55px;
+  width: 55px;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 75vh;
+  left: 500px;
+  border-radius: 50px;
+  color: black;
+  text-align: center; }
+  .backtotop i {
+    font-size: 2.5em;
+    padding-top: 7px; }
+
+.backtotoplol {
+  left: 128px;
+  display: block;
+  top: 75vh; }
 
 /*# sourceMappingURL=style.css.map */

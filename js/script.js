@@ -17,7 +17,7 @@ var aTag = document.getElementsByTagName('a');
 // Receive devices Viewportheight with the maximum of .clientHeight or .innerHeight
 
 var viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-console.log(viewportHeight);
+
 
 // Devide 9.1 of it to get the nice effect later
 
@@ -131,3 +131,48 @@ window.addEventListener('scroll', function (e) {
     }
 
 });
+
+
+
+
+
+// ###############################################################
+// ################## Back to top#################################
+// ###############################################################
+
+let viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+console.log(viewportWidth);
+
+
+let backToTopPositionWidth = viewportWidth / 10;
+
+backToTopPositionWidth1 = backToTopPositionWidth*8;
+
+backToTopPositionWidth2 = backToTopPositionWidth*1;
+
+console.log(backToTopPositionWidth1);
+
+let backToTop = document.querySelectorAll('.backtotop');
+
+backToTop[0].style.left = backToTopPositionWidth1+'px';
+backToTop[1].style.left = backToTopPositionWidth2+'px';
+
+
+window.addEventListener("resize", function(){
+
+let viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+
+
+
+let backToTopPositionWidth = viewportWidth / 10;
+backToTopPositionWidth1 = backToTopPositionWidth*8;
+backToTopPositionWidth2 = backToTopPositionWidth*1;
+let backToTop = document.querySelectorAll('.backtotop');
+let backToTop2 = document.querySelectorAll('.backtotop2');
+backToTop[0].style.left = backToTopPositionWidth1-20+'px';
+backToTop[1].style.left = backToTopPositionWidth2+'px';
+}, true);
+
+
+
