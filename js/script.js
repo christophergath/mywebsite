@@ -8,6 +8,7 @@
 
 var navItems = document.getElementsByClassName('nav-item');
 var navStyle = document.getElementsByTagName('nav');
+var midnavStyle = document.getElementsByTagName('mid-nav');
 var aTag = document.getElementsByTagName('a');
 
 // ###############################################################
@@ -44,6 +45,11 @@ function doSomething(scroll_pos) {
         navStyle[0].classList.remove('bg3');
         navStyle[0].classList.remove('bg4');
 
+        midnavStyle[0].classList.add('bg1');
+        midnavStyle[0].classList.remove('bg2');
+        midnavStyle[0].classList.remove('bg3');
+        midnavStyle[0].classList.remove('bg4');
+
         aTag[0].style.color = "black";
         aTag[1].style.color = "black";
         aTag[2].style.color = "black";
@@ -62,6 +68,11 @@ function doSomething(scroll_pos) {
         navStyle[0].classList.add('bg2');
         navStyle[0].classList.remove('bg3');
         navStyle[0].classList.remove('bg4');
+
+        midnavStyle[0].classList.remove('bg1');
+        midnavStyle[0].classList.add('bg2');
+        midnavStyle[0].classList.remove('bg3');
+        midnavStyle[0].classList.remove('bg4');
 
 
         aTag[0].style.color = "black";
@@ -86,6 +97,11 @@ function doSomething(scroll_pos) {
         navStyle[0].classList.remove('bg4');
         navStyle[0].classList.remove('bg1');
 
+        midnavStyle[0].classList.remove('bg2');
+        midnavStyle[0].classList.add('bg3');
+        midnavStyle[0].classList.remove('bg4');
+        midnavStyle[0].classList.remove('bg1');
+
         aTag[0].style.color = "white";
         aTag[1].style.color = "white";
         aTag[2].style.color = "white";
@@ -106,6 +122,11 @@ function doSomething(scroll_pos) {
         navStyle[0].classList.add('bg4');
         navStyle[0].classList.remove('bg2');
         navStyle[0].classList.remove('bg3');
+
+        midnavStyle[0].classList.remove('bg1');
+        midnavStyle[0].classList.add('bg4');
+        midnavStyle[0].classList.remove('bg2');
+        midnavStyle[0].classList.remove('bg3');
 
         aTag[0].style.color = "white";
         aTag[1].style.color = "white";
@@ -140,39 +161,29 @@ window.addEventListener('scroll', function (e) {
 // ################## Back to top#################################
 // ###############################################################
 
-let viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-
-console.log(viewportWidth);
 
 
-let backToTopPositionWidth = viewportWidth / 10;
-
-backToTopPositionWidth1 = backToTopPositionWidth*8;
-
-backToTopPositionWidth2 = backToTopPositionWidth*1;
-
-console.log(backToTopPositionWidth1);
-
-let backToTop = document.querySelectorAll('.backtotop');
-
-backToTop[0].style.left = backToTopPositionWidth1+'px';
-backToTop[1].style.left = backToTopPositionWidth2+'px';
+// ###############################################################
+// ################## Mobile Nav #################################
+// ###############################################################
 
 
-window.addEventListener("resize", function(){
+let burger = document.getElementById('mobile');
+let mNav = document.getElementsByClassName('mobile-nav');
 
-let viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+burger.addEventListener('click', function () {
 
-
-
-let backToTopPositionWidth = viewportWidth / 10;
-backToTopPositionWidth1 = backToTopPositionWidth*8;
-backToTopPositionWidth2 = backToTopPositionWidth*1;
-let backToTop = document.querySelectorAll('.backtotop');
-let backToTop2 = document.querySelectorAll('.backtotop2');
-backToTop[0].style.left = backToTopPositionWidth1-20+'px';
-backToTop[1].style.left = backToTopPositionWidth2+'px';
-}, true);
+mNav[0].classList.add('show');
+mNav[0].classList.remove('hide');
+console.log(mNav);
+})
 
 
+let closeButton = document.getElementById('close-menu');
+console.log(closeButton);
+closeButton.addEventListener('click', function () {
 
+    mNav[0].classList.remove('show');
+    mNav[0].classList.add('hide');
+    console.log("lol");
+})
